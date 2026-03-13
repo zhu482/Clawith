@@ -1,0 +1,228 @@
+/* ── 小龙虾状态挂件 ── */
+.lobster-widget {
+  position: fixed;
+  z-index: 9999;
+  cursor: grab;
+  user-select: none;
+  width: 72px;
+  height: 80px;
+}
+
+.lobster-widget:active {
+  cursor: grabbing;
+}
+
+.lobster-svg {
+  width: 72px;
+  height: 80px;
+  overflow: visible;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+  transition: filter 0.2s;
+}
+
+.lobster-widget:hover .lobster-svg {
+  filter: drop-shadow(0 6px 16px rgba(231,76,60,0.5));
+}
+
+/* ── 状态指示灯 ── */
+.lobster-dot {
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.5);
+  transition: background 0.3s;
+}
+
+/* ── idle：悠闲地轻摇螯 ── */
+.lobster-idle .lobster-claw-l {
+  animation: claw-idle-l 3s ease-in-out infinite;
+  transform-origin: 22px 34px;
+}
+.lobster-idle .lobster-claw-r {
+  animation: claw-idle-r 3s ease-in-out infinite;
+  transform-origin: 50px 34px;
+}
+.lobster-idle .lobster-tail {
+  animation: tail-sway 3s ease-in-out infinite;
+  transform-origin: 36px 72px;
+}
+
+/* ── working：疯狂挥螯 + 步足快跑 ── */
+.lobster-working .lobster-claw-l {
+  animation: claw-work-l 0.4s ease-in-out infinite;
+  transform-origin: 22px 34px;
+}
+.lobster-working .lobster-claw-r {
+  animation: claw-work-r 0.4s ease-in-out infinite 0.2s;
+  transform-origin: 50px 34px;
+}
+.lobster-working .lobster-leg-l1,
+.lobster-working .lobster-leg-l2,
+.lobster-working .lobster-leg-l3 {
+  animation: legs-l 0.3s linear infinite;
+  transform-origin: 22px 44px;
+}
+.lobster-working .lobster-leg-r1,
+.lobster-working .lobster-leg-r2,
+.lobster-working .lobster-leg-r3 {
+  animation: legs-r 0.3s linear infinite 0.15s;
+  transform-origin: 50px 44px;
+}
+.lobster-working .lobster-antenna-l {
+  animation: antenna-shake 0.2s ease-in-out infinite;
+  transform-origin: 28px 21px;
+}
+.lobster-working .lobster-antenna-r {
+  animation: antenna-shake-r 0.2s ease-in-out infinite;
+  transform-origin: 44px 21px;
+}
+/* 整体轻微上下弹 */
+.lobster-state-working .lobster-svg {
+  animation: bounce-work 0.4s ease-in-out infinite;
+}
+
+/* ── done：跳起来庆祝 ── */
+.lobster-state-done .lobster-svg {
+  animation: celebrate 0.6s ease-in-out 3;
+}
+.lobster-done .lobster-claw-l {
+  animation: claw-cheer 0.5s ease-in-out 3;
+  transform-origin: 22px 34px;
+}
+.lobster-done .lobster-claw-r {
+  animation: claw-cheer-r 0.5s ease-in-out 3 0.1s;
+  transform-origin: 50px 34px;
+}
+.lobster-done .lobster-stars {
+  animation: stars-pop 1.5s ease-out 1;
+}
+
+/* ── error：瘫倒 ── */
+.lobster-state-error .lobster-svg {
+  animation: slump 0.5s ease-out forwards;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35)) grayscale(0.4);
+}
+.lobster-error .lobster-claw-l {
+  animation: droop-l 0.5s ease-out forwards;
+  transform-origin: 22px 34px;
+}
+.lobster-error .lobster-claw-r {
+  animation: droop-r 0.5s ease-out forwards;
+  transform-origin: 50px 34px;
+}
+
+/* ── Keyframes ── */
+
+@keyframes claw-idle-l {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-10deg); }
+}
+@keyframes claw-idle-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(10deg); }
+}
+@keyframes tail-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(5deg); }
+}
+
+@keyframes claw-work-l {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-35deg) translateY(-4px); }
+}
+@keyframes claw-work-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(35deg) translateY(-4px); }
+}
+@keyframes legs-l {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-15deg); }
+}
+@keyframes legs-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(15deg); }
+}
+@keyframes antenna-shake {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-8deg); }
+}
+@keyframes antenna-shake-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(8deg); }
+}
+@keyframes bounce-work {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  30%       { transform: translateY(-12px) rotate(-5deg) scale(1.1); }
+  60%       { transform: translateY(-8px) rotate(5deg) scale(1.1); }
+}
+@keyframes claw-cheer {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(-50deg) translateY(-8px); }
+}
+@keyframes claw-cheer-r {
+  0%, 100% { transform: rotate(0deg); }
+  50%       { transform: rotate(50deg) translateY(-8px); }
+}
+@keyframes stars-pop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  30%  { opacity: 1; transform: scale(1.3); }
+  100% { opacity: 0; transform: scale(1) translateY(-10px); }
+}
+
+@keyframes slump {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(15deg) translateY(4px); }
+}
+@keyframes droop-l {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(20deg) translateY(6px); }
+}
+@keyframes droop-r {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-20deg) translateY(6px); }
+}
+
+/* ── Tooltip ── */
+.lobster-tooltip {
+  position: absolute;
+  bottom: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 15, 25, 0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: tooltip-in 0.18s ease;
+  backdrop-filter: blur(8px);
+}
+
+.lobster-tooltip-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+
+@keyframes tooltip-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── 指示灯脉冲 ── */
+.lobster-state-working .lobster-dot {
+  animation: pulse-dot 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(250,204,21,0.6); }
+  50%       { box-shadow: 0 0 0 5px rgba(250,204,21,0); }
+}

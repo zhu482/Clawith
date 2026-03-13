@@ -1,0 +1,18 @@
+# ClawCrew
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+*.db
+.DS_Store
+
+# Runtime agent data
+backend/data/
+backend/agent_data/
+ss-nodes.json

@@ -1,0 +1,229 @@
+/* ── 水豚状态挂件 ── */
+.capybara-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.capybara-body {
+  position: relative;
+  width: 80px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  transition: transform 0.2s ease;
+}
+
+.capybara-widget:hover .capybara-body {
+  transform: scale(1.08);
+}
+
+.capybara-svg {
+  width: 80px;
+  height: 60px;
+  overflow: visible;
+}
+
+/* ── 状态指示灯 ── */
+.capybara-dot {
+  position: absolute;
+  bottom: 2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #1a1a2e;
+}
+
+.capybara-dot-checking { background: #888; animation: pulse-gray 1.2s infinite; }
+.capybara-dot-online   { background: #4ade80; animation: pulse-green 2s infinite; }
+.capybara-dot-warning  { background: #facc15; animation: pulse-yellow 1s infinite; }
+.capybara-dot-offline  { background: #f87171; }
+
+/* ── 每个状态的水豚动画 ── */
+
+/* online: 悠闲地嚼草 */
+.capybara-online .capybara-svg {
+  animation: chew 1.4s ease-in-out infinite;
+}
+.capybara-online .capybara-grass {
+  animation: grass-wiggle 1.4s ease-in-out infinite;
+}
+
+/* warning: 左右张望 */
+.capybara-warning .capybara-svg {
+  animation: look-around 2s ease-in-out infinite;
+}
+.capybara-warning .capybara-ear-left,
+.capybara-warning .capybara-ear-right {
+  animation: ear-perk 2s ease-in-out infinite;
+}
+
+/* offline: 睡着了，侧躺 */
+.capybara-offline .capybara-svg {
+  animation: sleeping 4s ease-in-out infinite;
+  transform-origin: center;
+}
+.capybara-offline .capybara-zzz {
+  animation: float-up 3s ease-in-out infinite;
+}
+
+/* checking: 眨眼等待 */
+.capybara-checking .capybara-eye {
+  animation: blink 1.5s ease-in-out infinite;
+}
+.capybara-checking .capybara-dots {
+  animation: dots-pulse 1.2s ease-in-out infinite;
+}
+
+/* 手动眨眼（刷新时） */
+.capybara-blink .capybara-eye {
+  animation: blink-fast 0.4s ease-in-out 1 !important;
+}
+
+/* ── Keyframes ── */
+
+@keyframes chew {
+  0%, 100% { transform: rotate(0deg); }
+  25%       { transform: rotate(1.5deg) translateY(-1px); }
+  50%       { transform: rotate(0deg) translateY(-2px); }
+  75%       { transform: rotate(-1.5deg) translateY(-1px); }
+}
+
+@keyframes grass-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  30%       { transform: rotate(6deg); }
+  70%       { transform: rotate(-4deg); }
+}
+
+@keyframes look-around {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(3px); }
+  50%       { transform: translateX(0); }
+  70%       { transform: translateX(-3px); }
+}
+
+@keyframes ear-perk {
+  0%, 60%, 100% { transform: scaleY(1); }
+  30%            { transform: scaleY(1.2) translateY(-2px); }
+}
+
+@keyframes sleeping {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50%       { transform: rotate(8deg) translateY(3px); }
+}
+
+@keyframes float-up {
+  0%   { opacity: 0; transform: translateY(4px); }
+  30%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-12px); }
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95%            { transform: scaleY(0.1); }
+}
+
+@keyframes blink-fast {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(0.05); }
+}
+
+@keyframes dots-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
+  50%       { box-shadow: 0 0 0 5px rgba(74, 222, 128, 0); }
+}
+
+@keyframes pulse-yellow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7); }
+  50%       { box-shadow: 0 0 0 5px rgba(250, 204, 21, 0); }
+}
+
+@keyframes pulse-gray {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ── 展开面板 ── */
+.capybara-panel {
+  background: rgba(20, 20, 35, 0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 180px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  animation: panel-in 0.18s ease;
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.capybara-panel-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.capybara-panel-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  padding: 4px 0;
+}
+
+.capybara-panel-status {
+  margin-left: auto;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.green { background: #4ade80; }
+.dot.red   { background: #f87171; }
+
+.capybara-refresh {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.capybara-refresh:hover {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── 水豚彩蛋：长按变大 ── */
+.capybara-widget:active .capybara-body {
+  transform: scale(0.92);
+}
