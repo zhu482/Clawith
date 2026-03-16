@@ -16,3 +16,9 @@ venv/
 backend/data/
 backend/agent_data/
 ss-nodes.json
+
+# Credentials
+.wechat_api_config
+
+# Internal company docs
+天使计划/
