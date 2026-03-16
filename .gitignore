@@ -12,10 +12,22 @@ venv/
 *.db
 .DS_Store
 
-# Runtime agent data
+# Runtime data
 backend/data/
-backend/agent_data/
 ss-nodes.json
+
+# Agent workspace system/cache files (not content)
+workspace/Library/
+**/workspace/Library/
+*.safetensors
+
+# Oversized binary files in agent workspaces (>100MB, GitHub limit)
+**/FireRed-OpenStoryline/resource.zip
+**/FireRed-OpenStoryline/models.zip
+
+# Embedded git repos in agent workspaces (have their own GitHub repos)
+**/workspace/FireRed-OpenStoryline/
+**/workspace/OpenStoryline/
 
 # Credentials
 .wechat_api_config

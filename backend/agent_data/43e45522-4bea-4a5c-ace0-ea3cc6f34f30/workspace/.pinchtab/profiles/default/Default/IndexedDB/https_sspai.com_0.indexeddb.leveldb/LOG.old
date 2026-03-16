@@ -1,0 +1,6 @@
+2026/03/10-11:29:09.979 21bb050 Creating DB /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/IndexedDB/https_sspai.com_0.indexeddb.leveldb since it was missing.
+2026/03/10-11:29:09.986 21bb050 Reusing MANIFEST /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/IndexedDB/https_sspai.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/10-11:29:09.989 21bb050 Level-0 table #5: started
+2026/03/10-11:29:09.993 21bb050 Level-0 table #5: 1112 bytes OK
+2026/03/10-11:29:09.994 21bb050 Delete type=0 #3
+2026/03/10-11:29:09.994 21bb050 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

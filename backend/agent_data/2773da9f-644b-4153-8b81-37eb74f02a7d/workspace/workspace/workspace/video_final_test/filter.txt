@@ -1,0 +1,4 @@
+drawtext=fontfile=/System/Library/Fonts/PingFang.ttc:text='各位老板好，我是龙虾导演！':fontcolor=white:fontsize=48:x=(w-text_w)/2:y=h-300:enable='between(t,0,2.5)',
+drawtext=fontfile=/System/Library/Fonts/PingFang.ttc:text='真正的全链路AI视频制作':fontcolor=white:fontsize=48:x=(w-text_w)/2:y=h-300:enable='between(t,2.5,6.5)',
+drawtext=fontfile=/System/Library/Fonts/PingFang.ttc:text='清晰的声音，精美的画面和精准的字幕':fontcolor=white:fontsize=45:x=(w-text_w)/2:y=h-300:enable='between(t,6.5,10.0)',
+drawtext=fontfile=/System/Library/Fonts/PingFang.ttc:text='准备好迎接内容风暴了吗？':fontcolor=white:fontsize=50:x=(w-text_w)/2:y=h-300:enable='between(t,10.0,15.0)'

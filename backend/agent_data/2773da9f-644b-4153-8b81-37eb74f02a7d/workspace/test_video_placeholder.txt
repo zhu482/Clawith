@@ -1,0 +1,3 @@
+测试视频文件位于: /tmp/video_test/slack_test.mp4
+规格: 1920x1048, H.264, 30fps, 15秒, 648KB
+来源: B站 BV1eW9XY1Ebi (Slack MCP 教程视频)

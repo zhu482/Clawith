@@ -1,0 +1,7 @@
+2026/03/10-11:29:21.100 21bb050 Reusing MANIFEST /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/IndexedDB/https_sspai.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/10-11:29:21.101 21bb050 Recovering log #4
+2026/03/10-11:29:21.101 21bb050 Reusing old log /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/IndexedDB/https_sspai.com_0.indexeddb.leveldb/000004.log 
+2026/03/10-11:29:21.106 21bb050 Level-0 table #8: started
+2026/03/10-11:29:21.127 21bb050 Level-0 table #8: 1078 bytes OK
+2026/03/10-11:29:21.130 21bb050 Delete type=0 #4
+2026/03/10-11:29:21.130 21bb050 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

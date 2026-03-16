@@ -1,0 +1,5 @@
+# 向量库（使用 sentence-transformers，内置向量化和检索）
+sentence-transformers
+
+# 文本处理
+jieba

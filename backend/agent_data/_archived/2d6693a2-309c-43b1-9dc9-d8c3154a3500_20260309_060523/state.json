@@ -1,0 +1,13 @@
+{
+  "agent_id": "2d6693a2-309c-43b1-9dc9-d8c3154a3500",
+  "name": "🦞 测试",
+  "status": "idle",
+  "current_task": null,
+  "last_active": null,
+  "channel_status": {},
+  "stats": {
+    "tasks_completed_today": 0,
+    "tasks_in_progress": 0,
+    "督办_pending": 0
+  }
+}

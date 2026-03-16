@@ -1,0 +1,27 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/zhuzhiheng/.local/lib/node_modules/pinchtab/.npmrc
+5 silly config load:file:/Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/***/workspace/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm rebuild pinchtab
+8 verbose argv "rebuild" "pinchtab"
+9 verbose logfile logs-max:10 dir:/Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/***/workspace/.npm/_logs/2026-03-10T03_19_22_764Z-
+10 verbose logfile /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/***/workspace/.npm/_logs/2026-03-10T03_19_22_764Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 info run pinchtab@0.7.8 postinstall  node scripts/postinstall.js
+14 http fetch GET 200 https://registry.npmjs.org/npm 723ms
+15 info run pinchtab@0.7.8 postinstall { code: 0, signal: null }
+16 verbose cwd /Users/zhuzhiheng/.local/lib/node_modules/pinchtab
+17 verbose os Darwin 22.6.0
+18 verbose node v24.11.0
+19 verbose npm  v11.6.1
+20 notice
+20 notice New minor version of npm available! 11.6.1 -> 11.11.0
+20 notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+20 notice To update run: npm install -g npm@11.11.0
+20 notice  { force: true, Symbol(proc-log.meta): true }
+21 verbose exit 0
+22 info ok

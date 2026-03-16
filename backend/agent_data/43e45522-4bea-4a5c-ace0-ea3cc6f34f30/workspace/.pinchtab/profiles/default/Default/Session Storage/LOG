@@ -1,0 +1,56 @@
+2026/03/10-11:20:04.212 21bb0bc Creating DB /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/Session Storage since it was missing.
+2026/03/10-11:20:04.220 21bb0bc Reusing MANIFEST /Users/zhuzhiheng/Desktop/Clawith-main/backend/agent_data/43e45522-4bea-4a5c-ace0-ea3cc6f34f30/workspace/.pinchtab/profiles/default/Default/Session Storage/MANIFEST-000001
+2026/03/10-13:07:05.720 21bb0c0 Level-0 table #5: started
+2026/03/10-13:07:05.729 21bb0c0 Level-0 table #5: 16868 bytes OK
+2026/03/10-13:07:05.735 21bb0c0 Delete type=0 #3
+2026/03/10-14:13:42.037 21bb0c0 Level-0 table #7: started
+2026/03/10-14:13:42.041 21bb0c0 Level-0 table #7: 11718 bytes OK
+2026/03/10-14:13:42.046 21bb0c0 Delete type=0 #4
+2026/03/10-15:01:28.522 21bb0c0 Level-0 table #9: started
+2026/03/10-15:01:28.529 21bb0c0 Level-0 table #9: 13581 bytes OK
+2026/03/10-15:01:28.533 21bb0c0 Delete type=0 #6
+2026/03/10-15:48:09.710 21bb0c0 Level-0 table #11: started
+2026/03/10-15:48:09.717 21bb0c0 Level-0 table #11: 14780 bytes OK
+2026/03/10-15:48:09.721 21bb0c0 Delete type=0 #8
+2026/03/10-16:33:44.076 21bb0c0 Level-0 table #13: started
+2026/03/10-16:33:44.128 21bb0c0 Level-0 table #13: 17178 bytes OK
+2026/03/10-16:33:44.149 21bb0c0 Delete type=0 #10
+2026/03/10-17:14:24.543 21bb0c0 Level-0 table #15: started
+2026/03/10-17:14:24.547 21bb0c0 Level-0 table #15: 16666 bytes OK
+2026/03/10-17:14:24.550 21bb0c0 Delete type=0 #12
+2026/03/10-17:14:24.556 21bb0c0 Compacting 4@0 + 1@1 files
+2026/03/10-17:14:24.560 21bb0c0 Generated table #16@0: 2 keys, 1701 bytes
+2026/03/10-17:14:24.560 21bb0c0 Compacted 4@0 + 1@1 files => 1701 bytes
+2026/03/10-17:14:24.561 21bb0c0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/03/10-17:14:24.562 21bb0c0 Delete type=2 #15
+2026/03/10-17:14:24.562 21bb0c0 Delete type=2 #7
+2026/03/10-17:14:24.562 21bb0c0 Delete type=2 #13
+2026/03/10-17:14:24.562 21bb0c0 Delete type=2 #11
+2026/03/10-17:14:24.562 21bb0c0 Delete type=2 #9
+2026/03/10-17:41:58.688 21bb0c0 Level-0 table #18: started
+2026/03/10-17:41:58.715 21bb0c0 Level-0 table #18: 15545 bytes OK
+2026/03/10-17:41:58.720 21bb0c0 Delete type=0 #14
+2026/03/10-18:20:26.286 21bb0c0 Level-0 table #20: started
+2026/03/10-18:20:26.294 21bb0c0 Level-0 table #20: 14984 bytes OK
+2026/03/10-18:20:26.300 21bb0c0 Delete type=0 #17
+2026/03/10-18:44:13.681 21bb0c0 Level-0 table #22: started
+2026/03/10-18:44:13.687 21bb0c0 Level-0 table #22: 19261 bytes OK
+2026/03/10-18:44:13.699 21bb0c0 Delete type=0 #19
+2026/03/10-19:19:15.368 21bb0c0 Level-0 table #24: started
+2026/03/10-19:19:15.374 21bb0c0 Level-0 table #24: 19306 bytes OK
+2026/03/10-19:19:15.377 21bb0c0 Delete type=0 #21
+2026/03/10-19:19:15.387 21bb0c0 Compacting 4@0 + 1@1 files
+2026/03/10-19:19:15.393 21bb0c0 Generated table #25@0: 2 keys, 2186 bytes
+2026/03/10-19:19:15.393 21bb0c0 Compacted 4@0 + 1@1 files => 2186 bytes
+2026/03/10-19:19:15.394 21bb0c0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/03/10-19:19:15.395 21bb0c0 Delete type=2 #16
+2026/03/10-19:19:15.395 21bb0c0 Delete type=2 #20
+2026/03/10-19:19:15.395 21bb0c0 Delete type=2 #22
+2026/03/10-19:19:15.395 21bb0c0 Delete type=2 #18
+2026/03/10-19:19:15.395 21bb0c0 Delete type=2 #24
+2026/03/10-19:40:36.436 21bb0c0 Level-0 table #27: started
+2026/03/10-19:40:36.440 21bb0c0 Level-0 table #27: 19485 bytes OK
+2026/03/10-19:40:36.444 21bb0c0 Delete type=0 #23
+2026/03/10-20:07:54.455 21bb0c0 Level-0 table #29: started
+2026/03/10-20:07:54.461 21bb0c0 Level-0 table #29: 19580 bytes OK
+2026/03/10-20:07:54.465 21bb0c0 Delete type=0 #26
